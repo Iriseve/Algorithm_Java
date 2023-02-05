@@ -45,7 +45,7 @@ public class D {
     }
 
     //判断点亮的灯是否是连通分支
-    //now表示当前点亮的灯，num表示点亮的灯的编号
+    //now表示当前点亮的灯，num表示点亮的灯的个数
     static boolean judge(int[] now, int num) {
         int e_count = num - 1;//如果是连通的情况，那么需要建立边的个数应该等于灯数-1
         init(); //初始化并查集
@@ -64,16 +64,20 @@ public class D {
     }
 
     //编号num 0，灯max -1
-    //num表示当前搜索到的编号，record表示目前记录在册点亮的灯
-    static void dfs(int num, int max, int[] record) {
-        if(judge(record,num)) res++;
+    //num_index表示当前搜索到的编号，record表示目前记录在册点亮的灯
+    static void dfs(int num_index, int max, int[] record) {
+        if(judge(record,num_index)) res++; //因为一开始先去判断是否连通，所以判断的上一次的选择，所以在judge中num_index代表的个数
+
+//        System.out.println("num_index："+num_index+" ");
+//        System.out.println("max:"+max+" ");
+//        System.out.println("-----");
 
         //这里终止条件就是i到7，这里用循环表示而已，意义上和单独写一个判断是一样的。
         for (int i =max+1;i<7;++i){
             if(!light[i]){
                 light[i]=true;
-                record[num]=i;//编号为num的灯是i
-                dfs(num+1,i,record);
+                record[num_index]=i;//编号为num_index的灯是i
+                dfs(num_index+1,i,record);
                 //record不用还原，下一次会直接覆盖
                 light[i]=false;
             }

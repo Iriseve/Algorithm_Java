@@ -11,7 +11,6 @@ import java.util.Scanner;
 public class T4800 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         int x = sc.nextInt();
         for (int y = x + 1; ; ++y) {
             int[] i = new int[10];
@@ -29,7 +28,6 @@ public class T4800 {
                 System.out.println(y);
                 break;
             }
-
         }
     }
 }

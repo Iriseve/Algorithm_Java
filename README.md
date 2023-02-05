@@ -6,12 +6,6 @@
 >
 > 类型和难度瞎写的，仅供菜菜自己参考..
 
-
-
-
-
-
-
 ## 蓝桥
 
 ### 第11届(2020)JavaB省赛
@@ -28,4 +22,16 @@
 |  H   | [数字三角形 ](https://www.lanqiao.cn/problems/505/learning/) | [数字三角形](src/lanqiao/Java2020B/H.java) |                |      |                                                              |
 |  I   | [子串分值和 ](https://www.lanqiao.cn/problems/1037/learning/) | [子串分值和](src/lanqiao/Java2020B/I.java) |                |      |                                                              |
 |  J   |   [装饰珠](https://www.lanqiao.cn/problems/507/learning/)    |   [装饰珠](src/lanqiao/Java2020B/J.java)   |                |      |                                                              |
+
+
+
+## Acwing
+
+### 第88场周赛
+
+| 题号 |                             题目                             |                     代码                      |     类型      | 难度 |                      备注                      |
+| :--: | :----------------------------------------------------------: | :-------------------------------------------: | :-----------: | :--: | :--------------------------------------------: |
+| 4800 | [下一个](https://www.acwing.com/activity/content/problem/content/7991/) |   [下一个](src/acwing/周赛/No88/T4800.java)   |     枚举      |  0   |               对于重复字符的处理               |
+| 4801 |   [强连通图](https://www.acwing.com/problem/content/4804/)   |  [强连通图](src/acwing/周赛/No88/T4801.java)  |     思维      |  2   | 别一看到连通两个字就上图论算法，可以先模拟模拟 |
+| 4802 |  [金明的假期](https://www.acwing.com/problem/content/4805/)  | [金明的假期](src/acwing/周赛/No88/T4802.java) | `DP` `状态机` |  2   |                   注意初始化                   |
 
