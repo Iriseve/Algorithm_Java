@@ -32,17 +32,17 @@ public class T4653 {
 
         //这里为了统一下标和数值 从1~n
         Integer[] a = new Integer[n + 1];//原数数组
-        for (int i = 1; i < n + 1; ++i)
+        for (int i = 1; i < n + 1; ++i) {
             a[i] = i;
+        }
 
         //注意一下，这里数组是引用类型，默认初始化为空，所以一定得从1开始，否则会报空指针异常
-        Arrays.sort(a, 1, n, new Comparator<Integer>() {
-            //注意这里方法参数列表不能直接写o1,o2（和原方法参数列表一样）会有问题
+        Arrays.sort(a, 1, n + 1, new Comparator<Integer>() {
             @Override
-            public int compare(Integer i, Integer j) {
-                int sum1 = sum(i);
-                int sum2 = sum(j);
-                return sum1 == sum2 ? i - j : sum1 - sum2;
+            public int compare(Integer o1, Integer o2) {
+                int sum1 = sum(o1);
+                int sum2 = sum(o2);
+                return sum1 == sum2 ? o1 - o2 : sum1 - sum2;
             }
         });
 

@@ -19,8 +19,9 @@ public class T3 {
             Integer count = map.get(s1);
             if (count != null) {
                 map.put(s1, ++count);
-            } else
+            } else {
                 map.put(s1, 1);
+            }
         }
 
         // 降序比较器
@@ -28,7 +29,6 @@ public class T3 {
             @Override
             public int compare(Map.Entry<String, Integer> o1,
                                Map.Entry<String, Integer> o2) {
-                // TODO Auto-generated method stub
                 return o2.getValue() - o1.getValue();
             }
         };
@@ -40,8 +40,9 @@ public class T3 {
         for (Map.Entry<String, Integer> entry : list) {
             if (entry.getValue().equals(value)) {
                 System.out.print(entry.getKey());
-            } else
+            } else {
                 break;
+            }
         }
     }
 }
